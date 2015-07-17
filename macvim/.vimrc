@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
 Bundle 'scrooloose/nerdtree'
 call vundle#end()
 filetype plugin indent on
@@ -90,4 +92,12 @@ if has("gui_macvim")
      \ }    
     let NERD_html_alt_style=1
 
+    " 下面是JsBeautify()的配置，但格式化后不好看，且快捷键冲突；
+    " map <c-f> :call JsBeautify()<cr>
+    " or
+    " autocmd FileType javascript noremap  <c-f> :call JsBeautify()<cr>
+    " for html
+    " autocmd FileType html noremap  <c-f> :call HtmlBeautify()<cr>
+    " for css or scss
+    " autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 endif
